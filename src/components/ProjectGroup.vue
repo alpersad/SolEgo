@@ -9,6 +9,14 @@
                             {{projectitem.description}}
                         </sui-card-description>
                     </sui-card-content>
+                    <sui-card-content extra>
+                        <sui-container text-align="center">
+                            <sui-button-group>
+                                <sui-button circular icon="github square" size="medium">
+                                </sui-button>
+                            </sui-button-group>
+                        </sui-container>
+                    </sui-card-content>
                 </sui-card>
         </sui-card-group>
     </div>

@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
         <div>
-            <img src="../../assets/kaguya.png" alt="Profile Picture" class="propic" >
+            <router-link to="/"><img src="../../assets/kaguya.png" alt="Profile Picture" class="propic" ></router-link>
         </div>
         <div class="nav-align">
             <router-link class="nav-text" to="/">Home</router-link> |
