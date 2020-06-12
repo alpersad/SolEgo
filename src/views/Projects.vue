@@ -23,13 +23,13 @@ export default {
                     id: 1,
                     title: 'LolTomes',
                     description: 'A minecraft mod',
-                    tech: ['java']
+                    tech: ['java','gradle']
                 },
                 {
                     id: 2,
                     title: 'SolEgo',
                     description: 'A website in vue',
-                    tech: ['vue.js','javascript/css/html']
+                    tech: ['vue.js','javascript', 'css', 'html']
                 },
                 {
                     id: 3,

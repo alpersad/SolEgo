@@ -4,8 +4,8 @@
             <router-link to="/"><img src="../../assets/kaguya.png" alt="Profile Picture" class="propic" ></router-link>
         </div>
         <div class="nav-align">
-            <router-link class="nav-text" to="/">Home</router-link> |
-            <router-link class="nav-text" to="/about">About</router-link> |
+            <router-link class="nav-text" to="/">Home</router-link> 
+            <router-link class="nav-text" to="/about">About</router-link> 
             <router-link class="nav-text" to="/projects">Projects</router-link>
         </div>
         <router-view/>
@@ -27,7 +27,7 @@ export default {
         border-color: #D93662;
         text-align: left;
     }
-    a.nav-text {
+    .nav-text {
         font-size: 24px;
         color: white;
         margin: 20px;
@@ -46,5 +46,9 @@ export default {
         float: left;
         margin-top: 30px;
         margin-left: 50px;
+    }
+    .router-link-exact-active {
+        color: gray;
+        text-decoration: underline;
     }
 </style>
