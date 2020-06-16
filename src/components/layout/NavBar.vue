@@ -1,14 +1,23 @@
 <template>
   <div id="nav">
     <div>
-      <router-link to="/"
-        ><img src="../../assets/kaguya.png" alt="Profile Picture" class="propic"
-      /></router-link>
+      <router-link to="/home">
+        <img src="../../assets/kaguya.png" alt="Profile Picture" class="propic" />
+      </router-link>
     </div>
     <div class="nav-align">
-      <router-link class="nav-text" to="/">Home</router-link>
-      <router-link class="nav-text" to="/about">About</router-link>
-      <router-link class="nav-text" to="/projects">Projects</router-link>
+      <button
+        :class="[currentPage.includes('home') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/home')"
+      >Home</button>
+      <button
+        :class="[currentPage.includes('about') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/about')"
+      >About</button>
+      <button
+        :class="[currentPage.includes('projects') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/projects')"
+      >Projects</button>
     </div>
   </div>
 </template>
@@ -16,40 +25,55 @@
 <script>
 export default {
   name: "NavBar",
+  data() {
+    return {
+      activeClass: "active"
+    };
+  },
+  computed: {
+    currentPage() {
+      return this.$route.path;
+    }
+  }
 };
 </script>
 
 <style scoped>
 #nav {
-  height: 100px;
+  height: 75px;
   width: auto;
   background-color: #261421;
   border-bottom-style: solid;
   border-color: #d93662;
   text-align: left;
 }
-.nav-text {
-  font-size: 24px;
-  color: white;
-  margin: 20px;
-}
 .nav-align {
-  padding-top: 50px;
   margin-left: 250px;
 }
-a:hover {
-  color: gray;
-  text-decoration: underline;
+.nav-item {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 72px;
+}
+.nav-align button:hover {
+  background-color: #585055;
+}
+.nav-align button:active {
+  background-color: #3b383a;
+}
+.active {
+  background-color: #3b383a;
 }
 .propic {
   height: 150px;
   width: 150px;
   float: left;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 50px;
-}
-.router-link-exact-active {
-  color: gray;
-  text-decoration: underline;
 }
 </style>
