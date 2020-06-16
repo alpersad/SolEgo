@@ -1,0 +1,16 @@
+[
+  {
+    "id": null,
+    "title": "LolTomes",
+    "description": "A Minecraft mod based on League of Legends champions. The mod adds new enchantments that can be used on weapons and armor.",
+    "tech": ["java"],
+    "github": "https://github.com/alpersad/LolTomes"
+  },
+  {
+    "id": null,
+    "title": "SolEgo",
+    "description": "A personal site built using Vue.js.",
+    "tech": ["vue.js", "javascript", "css", "html"],
+    "github": "https://github.com/alpersad/SolEgo"
+  }
+]
