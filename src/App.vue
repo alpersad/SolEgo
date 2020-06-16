@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <NavBar/>
+    <portal-target name="semantic-ui-vue" />
+    <NavBar />
+    <router-view />
   </div>
 </template>
 
 <script>
-import NavBar from './components/layout/NavBar'
+import NavBar from "./components/layout/NavBar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar
-  }
-}
+    NavBar,
+  },
+};
 </script>
 
 <style>
@@ -21,13 +23,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+  background-color: #fafafa;
 }
 
 .main {
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
-    text-align: center;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
 }
-
 </style>
