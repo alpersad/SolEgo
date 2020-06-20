@@ -11,11 +11,18 @@
         @click="$router.push('/home')"
       >Home</button>
       <button
-        :class="[currentPage.includes('about') ? activeClass : '', 'nav-item']"
-        @click="$router.push('/about')"
+        :class="[currentPage.includes('canvas') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/canvas')"
       >About</button>
       <button
-        :class="[currentPage.includes('projects') ? activeClass : '', 'nav-item']"
+        :class="[currentPage.includes('game') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/game')"
+      >Game</button>
+      <button
+        :class="[
+          currentPage.includes('projects') ? activeClass : '',
+          'nav-item',
+        ]"
         @click="$router.push('/projects')"
       >Projects</button>
     </div>
