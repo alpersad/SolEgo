@@ -12,8 +12,8 @@ import NavBar from "./components/layout/NavBar";
 export default {
   name: "App",
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 
@@ -23,6 +23,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+}
+
+body {
   background-color: #fafafa;
 }
 
