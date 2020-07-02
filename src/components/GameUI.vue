@@ -3,16 +3,12 @@
     <sui-tab>
       <sui-tab-pane title="Main UI">
         <h3>HTML</h3>
-        <p>
-          HTML (HyperText Markup Language) is the most basic building block of
-          the Web. It describes and defines the content of a webpage along with
-          the basic layout of the webpage. Other technologies besides HTML are
-          generally used to describe a web page's appearance/presentation (CSS)
-          or functionality/ behavior (JavaScript).
-        </p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">developer.mozilla.org</a>
+        <p>{{ sceneInfo }}</p>
         <sui-divider />
-        <sui-button :content="gameDecision"></sui-button>
+        <sui-button></sui-button>
+        <sui-divider />
+        <h3>{{flavorTitle}}</h3>
+        <p>{{flavorText}}</p>
       </sui-tab-pane>
       <sui-tab-pane title="Instructions">
         <h3>CSS</h3>
@@ -31,7 +27,20 @@
 <script>
 export default {
   name: "GameUI",
-  props: ["gameDecision"]
+  props: ["gameDecision", "flavorID"],
+  data() {
+    return {
+      flavorTitle: "Title"
+    };
+  },
+  computed: {
+    sceneInfo: function() {
+      return "THIS IS THE SCENE";
+    },
+    flavorText: function() {
+      return this.flavorID;
+    }
+  }
 };
 </script>
 

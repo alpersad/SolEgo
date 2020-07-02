@@ -4,12 +4,12 @@
       <sui-grid-row stretched>
         <sui-grid-column>
           <sui-segment>
-            <GameCanvas v-on:coords="handleCoords" />
+            <GameCanvas v-on:selected="handleSelected" v-bind:level="level" />
           </sui-segment>
         </sui-grid-column>
         <sui-grid-column>
           <sui-segment>
-            <GameUI v-bind:gameDecision="buttonMessage" />
+            <GameUI v-bind:flavorID="flavorID" />
           </sui-segment>
         </sui-grid-column>
       </sui-grid-row>
@@ -21,6 +21,15 @@
 import GameCanvas from "../components/GameCanvas";
 import GameUI from "../components/GameUI";
 
+export const LEVEL = Object.freeze({
+  START: 0,
+  SMART: 1,
+  EMOTIONS: 2,
+  LOVE: 3,
+  SADNESS: 4,
+  END: 5
+});
+
 export default {
   name: "Game",
   components: {
@@ -29,12 +38,14 @@ export default {
   },
   data() {
     return {
-      buttonMessage: "Click to advance"
+      flavorID: "",
+      LEVEL,
+      level: LEVEL.START
     };
   },
   methods: {
-    handleCoords(coords) {
-      this.buttonMessage = coords[0] + " " + coords[1];
+    handleSelected(name) {
+      this.flavorID = name;
     }
   }
 };
