@@ -2,8 +2,14 @@
 
 ## Description
 
-A personal website developed using Vue.js.
+A personal website developed using Vue.js. This website is a foundation to develop new webtools and games.
+
+### Personal Project List
+
 A catalogue of my projects are displayed with a dynamically generated sorting system.
+
+### Solego's Journey
+
 Currently developing a puzzle game, Solego's Journey, using Paper.js.
 
 ## Project setup
