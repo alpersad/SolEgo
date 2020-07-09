@@ -4,13 +4,23 @@
     "title": "LolTomes",
     "description": "A Minecraft mod based on League of Legends champions. The mod adds new enchantments that can be used on weapons and armor.",
     "tech": ["java"],
-    "github": "https://github.com/alpersad/LolTomes"
+    "github": "https://github.com/alpersad/LolTomes",
+    "youtube": "https://github.com/alpersad/LolTomes"
   },
   {
     "id": null,
     "title": "SolEgo",
     "description": "A personal site built using Vue.js.",
     "tech": ["vue.js", "javascript", "css", "html"],
-    "github": "https://github.com/alpersad/SolEgo"
+    "github": "https://github.com/alpersad/SolEgo",
+    "youtube": "https://github.com/alpersad/LolTomes"
+  },
+  {
+    "id": null,
+    "title": "Breakout",
+    "description": "A breakout game built for CS349:User Interfaces in Spring2019",
+    "tech": ["java"],
+    "github": "https://github.com/alpersad/Breakout",
+    "youtube": "https://github.com/alpersad/LolTomes"
   }
 ]
