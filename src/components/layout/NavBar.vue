@@ -1,26 +1,22 @@
 <template>
   <div id="nav">
     <div>
-      <router-link to="/home">
+      <router-link to="/projects">
         <img src="../../assets/kaguya.png" alt="Profile Picture" class="propic" />
       </router-link>
     </div>
     <div class="nav-align">
       <button
-        :class="[currentPage.includes('home') ? activeClass : '', 'nav-item']"
-        @click="$router.push('/home')"
+        :class="[currentPage.endsWith('/') ? activeClass : '', 'nav-item']"
+        @click="$router.push('/')"
       >Home</button>
       <button
-        :class="[currentPage.includes('canvas') ? activeClass : '', 'nav-item']"
-        @click="$router.push('/canvas')"
-      >About</button>
-      <button
-        :class="[currentPage.includes('game') ? activeClass : '', 'nav-item']"
+        :class="[currentPage.endsWith('game') ? activeClass : '', 'nav-item']"
         @click="$router.push('/game')"
-      >Game</button>
+      >Games</button>
       <button
         :class="[
-          currentPage.includes('projects') ? activeClass : '',
+          currentPage.endsWith('projects') ? activeClass : '',
           'nav-item',
         ]"
         @click="$router.push('/projects')"
@@ -39,6 +35,7 @@ export default {
   },
   computed: {
     currentPage() {
+      console.log(this.$route.path);
       return this.$route.path;
     }
   }

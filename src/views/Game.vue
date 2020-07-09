@@ -40,7 +40,7 @@ export default {
     return {
       flavorID: "",
       LEVEL,
-      level: LEVEL.START
+      level: LEVEL.LOVE
     };
   },
   methods: {
